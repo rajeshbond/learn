@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="static/css/trading.css">
+  <title>Trading Register</title>
+</head>
+<body>
+  <main-container>
+   <div class="tile-box">
+    <div class="div-tile-1"></div>
+    <div class="div-tile-1">
+      <h1 class="title">Compounding Funda</h1>      
+    </div>
+    <div class="div-tile-2">
+      <button id="dash-back" onclick="dashboard1() ">Dashboard</button>
+    </div> 
+   </div>
+   <div class="buysell-box">
+    <div id="realisation-screen" class="bs-real-btn">
+      <button id="bs-real-btn" onclick="pnlScreen()">PNL</button>
+      <button id="bs-entry-btn" onclick="entryScreen()">Entry</button>
+    </div>
+    
+    <div class="bs-bs-bth">
+      <button id="buy" onclick="entryPOPup('Buy')">Buy</button>
+      <button id="sell" onclick="entryPOPup('Sell')">Sell</button>
+
+    </div>
+
+    <div class="bs-pnl">
+      <p class="pnl-display">PNL</p>
+      <p id="pnl">0</p>
+    </div>
+    </div>
+    <div class="transaction">
+      <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Trade</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Trade Value</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+        
+      </div>
+      <div class="realisation">
+        <div class="table-container1">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Entry Date</th>
+                      <th>Entry Trade</th>
+                      <th>Symbol</th>
+                      <th>Entry Price</th>
+                      <th>Qty</th>
+                      <th>Exit Date</th>
+                      <th>Exit Price</th>
+                      <th>Profit / Loss</th>
+                  </tr>
+              </thead>
+              <tbody id="tableBody-realised"></tbody>
+          </table>
+      </div>
+      
+      <div class="container"></div>
+
+    </div>
+
+
+
+  </main-container>
+  <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+  <script src="static/js/trading.js"></script>
+</body>
+</html>
